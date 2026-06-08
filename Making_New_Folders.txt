@@ -1,0 +1,21 @@
+@echo off
+for /L %%i in (1,1,40) do (
+    md "question%%i"
+    (
+        echo ^<!DOCTYPE html^>
+        echo ^<html lang="en"^>
+        echo ^<head^>
+        echo     ^<meta charset="UTF-8"^>
+        echo     ^<meta name="viewport" content="width=device-width, initial-scale=1.0"^>
+        echo     ^<title^>Question %%i^</title^>
+        echo ^</head^>
+        echo ^<body^>
+	echo.			
+        echo ^</body^>
+        echo ^</html^>
+    ) > "question%%i\index.html"
+)
+echo Tamamlandi!
+pause
+
+rem .bat uzantılı olarak yadda saxla.

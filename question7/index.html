@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 7</title>
+    <style>
+            body{
+            font-family:serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0px;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas: 
+            "Header Header number3"
+            "number4 number5 number6";
+            gap: 10px;
+            width: 30%;
+        }
+
+        .container div{
+            padding: 50px;
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .Header{
+            grid-area: Header;
+            background-color: red;
+        }
+
+        .number3{
+            grid-area: number3;
+            background-color: blue;
+        }
+
+        .number4{
+            grid-area: number4;
+            background-color: blue;
+        }
+
+        .number5{
+            grid-area: number5;
+            background-color: blue;
+        }
+
+        .number6{
+            grid-area: number6;
+            background-color: blue;
+        }
+
+    </style>
+</head>
+
+<body>
+	<div class="container">
+        <div class="Header">Header</div>
+        <div class="number3">3</div>
+        <div class="number4">4</div>
+        <div class="number5">5</div>
+        <div class="number6">6</div>
+    </div>
+</body>
+</html>
