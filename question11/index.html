@@ -4,8 +4,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Question 11</title>
+    <style>
+
+        *{
+            box-sizing:border-box;
+            margin:0;
+            padding:0;
+        }
+
+        body{
+            font-family:serif;
+            min-height:100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .FlexBox{
+            display:flex;
+            flex-direction:column;
+            gap:10px;
+            color:white;
+
+                        
+            width: 100%;       
+            max-width: 250px;
+        }
+
+        .FlexBox div{
+            font-size: 1.2rem;
+            border-radius: 8px;
+            /*padding:20px 120px 20px 20px;*/
+            padding: 20px;
+        }
+
+        .ElementBlue{
+            background-color:#3498DC;
+        }
+
+        .ElementRed{
+            background-color:#E74D3D;
+        }
+
+        .ElementGreen{
+            background-color:#2DCB71;
+        }
+
+    </style>
 </head>
 <body>
-			
+    <div class="FlexBox">
+	    <div class="ElementBlue">Element 1</div>
+        <div class="ElementRed">Element 2</div>
+        <div class="ElementGreen">Element 3</div>
+    </div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Gemini kodu: -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 11 - Professional Flexbox</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5f5f5;
+        }
+
+        /* 1. Profesyonel Adım: Kebab-case isimlendirme ve temiz flex yönetimi */
+        .flex-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            color: white;
+            width: 100%;       /* Mobil cihazlarda dışarı taşmasın */
+            max-width: 250px;  /* Kutuların toplam genişliğini buradan tek hamlede yönetiyoruz */
+        }
+
+        /* 2. Profesyonel Adım: Padding'i eşit yapıp, genişliği üstten yönetmek */
+        .flex-container div {
+            font-size: 1.2rem;
+            border-radius: 8px;
+            padding: 20px;     /* Her yönden eşit iç boşluk, yazı uzasa da kutu genişliği bozulmaz */
+        }
+
+        /* Renk sınıfları küçük harf ve temiz */
+        .btn-blue {
+            background-color: #3498db;
+        }
+
+        .btn-red {
+            background-color: #e74c3c;
+        }
+
+        .btn-green {
+            background-color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="flex-container">
+        <div class="btn-blue">Element 1</div>
+        <div class="btn-red">Element 2</div>
+        <div class="btn-green">Element 3</div>
+    </div>
+
+</body>
+</html> -->

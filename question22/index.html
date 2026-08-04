@@ -4,8 +4,194 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Question 22</title>
+    <style>
+
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-family:serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .login-form{
+            width: 350px;
+            padding: 20px;
+            border: 3px solid #FFAE24;
+
+        }
+
+        .login-form form{
+            display:flex;
+            flex-direction: column;
+            gap:20px;
+            
+        }
+
+        .login-form h3{
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.2rem;
+            color: #B78206;
+        }
+
+        .login-form form input{
+            padding: 10px;
+            outline: none;
+            border: 3px solid #FFAE24;
+            font-size: 1rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .login-form form input:focus{
+            border-color: black;
+        }
+
+        .login-form form label{
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        .login-form form select{
+            padding: 10px;
+            outline: none;
+            border: 3px solid #FFAE24;
+            font-size: 1rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .login-form form select:focus{
+            border-color: black;
+        }
+
+        .login-form form button{
+            padding: 10px 20px 10px 20px;
+            background-color: #FF8C02;
+            color: #fff;
+            border: none;
+            font-size: 1rem;
+            font-weight: 700;
+            font-family: sans-serif;
+            transition: background-color 0.2s ease;
+        }
+
+        .login-form form button:hover{
+            cursor: pointer;
+            background-color: #FFAE24;
+        }
+        
+        /* Şifre kutusu ile gözü tutan alan */
+        /* .password-wrapper {
+            position: relative;
+            width: 100%;
+        } */
+
+        /* Şifre inputunun sağ tarafında göz simgesine yer açıyoruz */
+        /* .password-wrapper input {
+            width: 100%;
+            padding-right: 40px !important; 
+        } */
+
+        /* Göz simgesinin tasarımı ve konumu */
+        /* #eyebtn {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 1.1rem;
+           user-select: none;
+        } */
+
+    </style>
 </head>
 <body>
-			
+	<div class="login-form">
+        <h3>Login Form</h3>
+        <form>
+            <label for="user_name">Username</label>
+            <input type="text" id="user_name" placeholder="Username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Password" required>
+
+            <!-- <div class="password-wrapper">
+                <input type="password" id="password" placeholder="Password" required>
+                <span id="eyebtn">🙈</span>
+            </div> -->
+
+            <label for="departments">Select Department:</label>
+            <select id="departments" name="user_department">
+                <option value="" disabled selected>Select Department</option>
+                <option value="ICT">Information and Computer Technologies</option>
+                <option value="CE">Computer Engineering</option>
+                <option value="IS">Information Security</option>
+                <option value="CS">Computer Science</option>
+            </select>
+
+            <button type="submit">Sign In</button>
+        </form>
+    </div>
+
+    <!-- <script>
+        // 1. Göz butonunu ve şifre kutusunu hafızaya alıyoruz
+        const eyebtn = document.getElementById('eyebtn');
+        const passwordInput = document.getElementById('password');
+
+        // 2. Göz butonuna tıklandığında ne olacağını söylüyoruz
+        eyebtn.addEventListener('click', function () {
+            // Eğer şu an türü 'password' ise 'text' yap, değilse 'password' yap
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                eyebtn.textContent = '👁️'; // Açık göz simgesi yapar
+            } else {
+                passwordInput.type = 'password';
+                eyebtn.textContent = '🙈'; // Kapalı göz simgesi yapar
+            }
+        });
+    </script> -->
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+<!-- Optgroup: -->
+            <!-- <select name="car">
+                <optgroup label="German automobiles">
+                    <option value="bmw">BMW</option>
+                    <option value="audi">Audi</option>
+                </optgroup>
+                <optgroup label="İtalian automobiles">
+                    <option value="ferrari">Ferrari</option>
+                    <option value="lambo">Lamborghini</option>
+                </optgroup>
+            </select> -->
+
+<!-- Datalist: -->
+            <!-- <label for="browser">Your browser:</label>
+            <input list="browsers" id="browser" placeholder="Browser">
+
+            <datalist id="browsers">
+                <option value="Google Chrome">
+                <option value="Mozilla Firefox">
+                <option value="Safari">
+            </datalist> -->
+

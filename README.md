@@ -12,9 +12,9 @@ This repository contains practice exercises implemented using HTML and CSS durin
 
 ## 📂 Folder Structure
 
-* `Soru-01/` - Programming page design
-* `Soru-02/` - Green-themed Form design
-* `Soru-07/` - CSS Grid layout application
+* `Question-01/` - Programming page design
+* `Question-02/` - Green-themed Form design
+* `Question-07/` - CSS Grid layout application
 *(And etc)*
 
 ## 🎯 Objective

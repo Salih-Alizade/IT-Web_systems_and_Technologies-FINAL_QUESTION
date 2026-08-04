@@ -4,8 +4,225 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Question 14</title>
+    <style>
+
+        *{
+            box-sizing: border-box;
+            margin:0;
+            padding:0;
+        }
+        body{
+            font-family:serif;
+            min-height:100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-page{
+            width: 300px;
+            display:flex;
+            flex-direction: column;
+        }
+
+        .login-page h3{
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .login-page form{
+            display:flex;
+            flex-direction: column;
+            gap:10px;
+        }
+
+        .login-page form input{
+            padding:10px;
+            border-radius: 5px;
+            border: 2px solid #1ABC9D;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .login-page form input:focus {
+            border-color: black;
+        }
+
+        .login-page form button{
+            padding:10px;
+            border-radius: 5px;
+            border:none;
+            background-color: #1ABC9D;
+            color:white;
+            transition: background-color 0.2s ease;
+        }
+
+        .login-page form button:hover{
+            background-color: #16A085;
+            cursor:pointer;
+        }
+
+        .login-page form label{
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+    </style>
 </head>
 <body>
-			
+	<div class="login-page">
+        <h3>Login</h3>
+        <form>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Your email address">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Password">
+            <label for="confirm-password">ConfirmPassword</label>
+            <input type="password" id="confirm-password" placeholder="Confirm password">
+            <button type="submit">Login</button>
+        </form>
+    </div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+<!-- Gemini kodu: -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 14 - Professional & JS</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-page {
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .login-page h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            color: #2c3e50;
+        }
+
+        .login-page form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .login-page form input {
+            padding: 10px;
+            border-radius: 5px;
+            border: 2px solid #1ABC9D;
+            outline: none; /* Tarayıcının varsayılan çirkin çizgisini sildik */
+            transition: border-color 0.2s ease;
+        }
+
+        .login-page form input:focus {
+            border-color: #117a65;
+        }
+
+        .login-page form button {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #1ABC9D;
+            color: white;
+            font-weight: bold;
+            transition: background-color 0.2s ease;
+        }
+
+        .login-page form button:hover {
+            background-color: #16A085;
+            cursor: pointer;
+        }
+
+        /* Profesyonel Yöntem: sr-only bağımsız bir sınıf haline getirildi */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-page">
+        <h3>Login</h3> -->
+        <!-- Formumuza JS ile yakalayabilmek için bir id verdik -->
+        <!-- <form id="loginForm">
+            <label for="email" class="sr-only">Email</label>
+            <input type="email" id="email" placeholder="Your email address" required>
+
+            <label for="password" class="sr-only">Password</label>
+            <input type="password" id="password" placeholder="Password" required>
+
+            <label for="confirm-password" class="sr-only">Confirm Password</label>
+            <input type="password" id="confirm-password" placeholder="Confirm password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </div> -->
+
+    <!-- JAVASCRIPT KODLARIMIZ BURADA BAŞLIYOR -->
+    <!-- <script>
+        // // 1. ADIM: HTML'deki elemanları JavaScript tarafında yakalıyoruz (Değişkene atıyoruz)
+        // const form = document.getElementById('loginForm');
+        // const passwordInput = document.getElementById('password');
+        // const confirmPasswordInput = document.getElementById('confirm-password');
+
+        // // 2. ADIM: Forma "GÖNDERİLME" (submit) olayını dinleyen bir bekçi koyuyoruz
+        // form.addEventListener('submit', function(event) {
+            
+        //     // Eğer iki şifre kutusundaki yazı (value) birbiriyle AYNIDEĞİLSE (!==)
+        //     if (passwordInput.value !== confirmPasswordInput.value) {
+                
+        //         // Formun otomatik olarak gönderilmesini / sayfanın yenilenmesini durdur!
+        //         event.preventDefault(); 
+                
+        //         // Kullanıcıya mesaj ver ve kutunun etrafını kırmızı yap
+        //         alert('Şifreler birbiriyle eşleşmiyor! Lütfen kontrol edin.');
+        //         confirmPasswordInput.style.borderColor = 'red';
+        //     } else {
+        //         alert('Tebrikler! Giriş başarılı, yönlendiriliyorsunuz...');
+        //     }
+        // });
+    </script>
+</body>
+</html> -->

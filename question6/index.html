@@ -4,8 +4,216 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Question 6</title>
+    <style>
+        
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-family:serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Registrationform{
+            width: 300px;
+            border: 3px solid orangered;
+            padding: 25px 20px 25px 20px;
+            display:flex;
+            flex-direction: column;
+        }
+
+        .Registrationform h3{
+            font-size: 1.2rem;
+            color: orangered;
+            margin-bottom: 25px;
+        }
+
+        .Registrationform form input{
+            width: 100%;
+            border: 1px solid orange;
+            border-radius: 2.5px;
+            margin-bottom: 15px;
+            padding: 10px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .Registrationform form input:focus {
+            border-color: black;
+        }
+
+        .Registrationform form button{
+            width: fit-content;
+            border:0px;
+            border-radius: 2.5px;
+            padding: 10px 20px 10px 20px;
+            color:white;
+            background-color: orangered;
+            transition: background-color 0.2s ease;
+        }
+
+        .Registrationform form button:hover{
+            background-color: orange;
+            cursor:pointer;
+        }
+
+        /*.Registrationform form label{
+            display:none;
+        }*/
+
+        .Registrationform form label{
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+    </style>
 </head>
 <body>
-			
+	<div class="Registrationform">
+        <h3>Registration Form</h3>
+        <form>
+            <label for="User_name">Username</label>
+            <input type="text" id="User_name" placeholder="Username">
+            <label for="User_Age">Age</label>
+            <input type="number" id="User_Age" placeholder="Age" min="0" max="100" required>
+            <label for="User_Phone">Phone</label>
+            <input type="tel" id="User_Phone" placeholder="Phone">
+            <button type="submit">Register</button>
+        </form>
+    </div>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Gemini kodu: -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 6 - Professional Form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .registration-card {
+            width: 320px;
+            border: 3px solid orangered;
+            padding: 30px 24px;
+            background-color: #ffffff;
+            border-radius: 6px; /* Hafif bir yumuşatma modern gösterir */
+        }
+
+        .registration-card h3 {
+            font-size: 1.4rem;
+            color: orangered;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        /* 1. Profesyonel Adım: Formu Flexbox ile alt alta dizmek */
+        .registration-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* Elemanların arasına eşit boşluk bırakır */
+        }
+
+        /* 2. Profesyonel Adım: Inputları esnek ve temiz tasarlamak */
+        .registration-form input {
+            width: 100%; /* Kapsayıcısına tam yayılır */
+            padding: 12px; /* Her yönden eşit, temiz iç boşluk */
+            border: 1px solid orange;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            outline: none; /* Tıklandığındaki varsayılan çirkin çizgiyi kaldırır */
+            transition: border-color 0.3s ease; /* Renk geçişini yumuşatır */
+        }
+
+        .registration-form input:focus {
+            border-color: orangered; /* Kullanıcı inputa tıkladığında renk koyulaşır */
+        }
+
+        /* 3. Profesyonel Adım: Buton Tasarımı */
+        .registration-form button {
+            width: fit-content; /* Buton sadece kendi yazısı kadar yer kaplasın (Görseldeki gibi) */
+            padding: 10px 24px;
+            background-color: orangered;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .registration-form button:hover {
+            background-color: orange;
+        }
+
+        /* 4. Profesyonel Adım: Erişilebilirlik için label gizleme */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="registration-card">
+        <h3>Registration Form</h3>
+        
+        <form class="registration-form">
+            <label for="user_name" class="sr-only">Username</label>
+            <input type="text" id="user_name" placeholder="Username" required>
+
+            <label for="user_age" class="sr-only">Age</label>
+            <input type="number" id="user_age" placeholder="Age" min="0" required>
+
+            <label for="user_phone" class="sr-only">Phone</label>
+            <input type="tel" id="user_phone" placeholder="Phone" required>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+</body>
+</html> -->

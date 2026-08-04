@@ -4,8 +4,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Question 30</title>
+    <style>
+
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-family:serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .registration-form{
+            width: 350px;
+            padding: 20px;
+            border: 3px solid #D06A1E;
+
+        }
+
+        .registration-form form{
+            display:flex;
+            flex-direction: column;
+            gap:20px;
+            
+        }
+
+        .registration-form h3{
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.2rem;
+            color: #904E1E;
+        }
+
+        .registration-form form input{
+            padding: 10px;
+            outline: none;
+            border: 3px solid #D29357;
+            font-size: 1rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .registration-form form input:focus{
+            border-color: black;
+        }
+
+        .registration-form form label{
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        .registration-form form select{
+            padding: 10px;
+            outline: none;
+            border: 3px solid #D19153;
+            font-size: 1rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .registration-form select:focus{
+            border-color: black;
+        }
+
+        .registration-form form button{
+            padding: 10px 20px 10px 20px;
+            background-color: #A0512D;
+            color: #fff;
+            border: none;
+            font-size: 1rem;
+            font-weight: 700;
+            font-family: sans-serif;
+            transition: background-color 0.2s ease;
+        }
+
+        .registration-form form button:hover{
+            cursor: pointer;
+            background-color: #FFAE24;
+        }
+
+    </style>
 </head>
 <body>
-			
+	<div class="registration-form">
+        <h3>Registration</h3>
+        <form>
+            <label for="user_name">First name</label>
+            <input type="text" id="user_name" placeholder="First name" required>
+
+            <label for="user_surname">Password</label>
+            <input type="text" id="user_surname" placeholder="Last Name" required>
+
+            <label for="user_phone">Password</label>
+            <input type="tel" id="user_phone" placeholder="Phone Number" required>
+
+            <label for="countries">Choose Country:</label>
+            <select id="countries" name="user_country" required>
+                <option value="" disabled selected>Choose Country</option>
+                <option value="AZE">Azerbaijan</option>
+                <option value="TUR">Turkey</option>
+                <option value="USA">United States of America</option>
+                <option value="DEU">Germany</option>
+            </select>
+
+            <button type="submit">Register now</button>
+        </form>
+    </div>
 </body>
 </html>

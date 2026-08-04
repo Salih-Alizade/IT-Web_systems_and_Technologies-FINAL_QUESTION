@@ -4,8 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Question 38</title>
+    <style>
+
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-family:serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact-form{
+            padding:20px;
+            border: 3px solid #FF73B9;    
+            width: 320px;
+        }
+
+        .contact-form form{
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .contact-form h3{
+            color: #FF40A6;
+            margin-bottom: 10px;
+        }
+        
+        .contact-form form label{
+            margin-bottom: 3px;
+            color: #DC7799;
+            font-weight: bold;
+        }
+
+        .contact-form form input{
+            width:100%;
+            padding: 5px;
+            margin-bottom: 15px;
+            outline: none;
+            border: 2px solid #FF92C7;
+        }
+
+        .contact-form form input:focus{
+            border: 2px solid #f60987;
+        }
+
+        textarea{
+            border: none;
+            outline: none;
+            border: 2px solid #AF96E4;
+            padding: 8px;
+        }
+
+        textarea:focus{
+            border: 2px solid #1f732e;
+        }
+
+        .contact-form form button{
+            padding: 10px 40px;
+            margin-top: 15px;
+            background-color: #FF6AB4;
+            color: #fff;
+            border: none;
+            transition: background-color 0.2s ease;
+        }
+
+        .contact-form form button:hover{
+            background-color: #FF92C7;
+            cursor: pointer;
+        }
+
+    </style>
 </head>
 <body>
-			
+	<div class="contact-form">
+        <h3>Feedback Form</h3>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="user_name" placeholder="Enter your name" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="user_phone" placeholder="Phone number" required>
+
+            <label for="company">Company:</label>
+            <input type="text" id="company" name="user_company" placeholder="Company name" required>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
 </body>
 </html>

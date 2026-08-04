@@ -4,8 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Question 27</title>
+    <style>
+
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-family:serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .grid-boxes{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .box{
+            width: 250px;
+            align-items: center;
+            color: white;
+            font-size: 1rem;
+            padding: 20px;
+        }
+
+        .Task1{
+            background-color: #2F8A58;
+        }
+
+        .Task2{
+            background-color: #248A24;
+        }
+
+        .Task3{
+            background-color: #036400;
+        }
+
+        .Task4{
+            background-color: #808000;
+        }
+
+    </style>
 </head>
 <body>
-			
+	<div class="grid-boxes">
+        <div class="box Task1">Task 1</div>
+        <div class="box Task2">Task 2</div>
+        <div class="box Task3">Task 3</div>
+        <div class="box Task4">Task 4</div>
+    </div>	
 </body>
 </html>

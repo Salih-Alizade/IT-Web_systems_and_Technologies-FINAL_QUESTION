@@ -4,8 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Question 19</title>
+    <style>
+
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-family:serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .boxes-container{
+            display: flex;
+            flex-direction: row;
+            padding: 20px 50px;
+            background-color: #E5E5FB;
+            gap: 100px;
+
+            flex-wrap: wrap;           /* Mobil için: Sığmayan kutuları alt satıra atar */
+            justify-content: center;   /* Mobil için: Kutuları ortalar */
+        }
+
+        .box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            width: 100px;
+            height: 100px;
+        }
+
+        .box-1{
+            background-color: #FE6446;
+        }
+
+        .box-2{
+            background-color: #218FFF;
+        }
+
+        .box-3{
+            background-color: #3BB370;
+        }
+
+    </style>
 </head>
 <body>
-			
+	<div class="boxes-container">
+        <div class="box box-1">1</div>
+        <div class="box box-2">2</div>
+        <div class="box box-3">3</div>
+    </div>
 </body>
 </html>
